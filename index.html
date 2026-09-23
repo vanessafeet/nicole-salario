@@ -363,46 +363,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<!-- RESUMEN TABLA 3 -->
-<div class="resumen" style="text-align:center; margin:40px 0; background:#000; padding:30px; border-radius:14px; border:1px solid #ffd700;">
-  <h2 id="ganancia-vendedora-3" style="color:#ffd700;font-weight:800;font-size:28px;">
-    NICOLE GANA $0.00 DÓLARES
-  </h2>
-  <h2 id="ganancia-coordinador-3" style="color:#ffff00;font-weight:700;font-size:24px;margin-top:15px;">
-    MIKE ROSALES GANA $0.00 DÓLARES
-  </h2>
-</div>
-
-<script>
-function calcularResumen3(){
-  let totalV = 0;
-  let totalC = 0;
-
-  const filas = document.querySelectorAll("#tabla-3 tbody tr");
-
-  filas.forEach(fila => {
-    const celdas = fila.children;
-
-    if (celdas.length >= 4) {
-      totalV += parseFloat(
-        celdas[1].textContent.replace("$","").replace(",","").trim()
-      ) || 0;
-
-      totalC += parseFloat(
-        celdas[3].textContent.replace("$","").replace(",","").trim()
-      ) || 0;
-    }
-  });
-
-  document.getElementById("ganancia-vendedora-3").textContent =
-    `NICOLE GANA $${totalV.toFixed(2)} DÓLARES`;
-
-  document.getElementById("ganancia-coordinador-3").textContent =
-    `MIKE ROSALES GANA $${totalC.toFixed(2)} DÓLARES`;
-}
-
-window.addEventListener("load", calcularResumen3);
-</script>
 
 
 <!------------------------------------------------------------------------------------------------------------------->
@@ -465,12 +425,57 @@ TABLA DE GANANCIAS 3
 
 <tr><td>Nicole Romero</td><td>$60.00</td><td>Mike Rosales</td><td>$3.00</td><td>04/31/2026</td><td>****</td><td>PAYPAL</td><td>Listo</td></tr>
 
+
 </tbody>
 </table>
 
 
-<!------------------------------------------------------------------------------------------------------------------->
 
+
+
+<!-- RESUMEN TABLA 3 -->
+<div class="resumen" style="text-align:center; margin:40px 0; background:#000; padding:30px; border-radius:14px; border:1px solid #ffd700;">
+  <h2 id="ganancia-vendedora-3" style="color:#ffd700;font-weight:800;font-size:28px;">
+    NICOLE GANA $0.00 DÓLARES
+  </h2>
+  <h2 id="ganancia-coordinador-3" style="color:#ffff00;font-weight:700;font-size:24px;margin-top:15px;">
+    MIKE ROSALES GANA $0.00 DÓLARES
+  </h2>
+</div>
+
+<script>
+function calcularResumen3(){
+  let totalV = 0;
+  let totalC = 0;
+
+  const filas = document.querySelectorAll("#tabla-3 tbody tr");
+
+  filas.forEach(fila => {
+    const celdas = fila.children;
+
+    if (celdas.length >= 4) {
+      totalV += parseFloat(
+        celdas[1].textContent.replace("$","").replace(",","").trim()
+      ) || 0;
+
+      totalC += parseFloat(
+        celdas[3].textContent.replace("$","").replace(",","").trim()
+      ) || 0;
+    }
+  });
+
+  document.getElementById("ganancia-vendedora-3").textContent =
+    `NICOLE GANA $${totalV.toFixed(2)} DÓLARES`;
+
+  document.getElementById("ganancia-coordinador-3").textContent =
+    `MIKE ROSALES GANA $${totalC.toFixed(2)} DÓLARES`;
+}
+
+window.addEventListener("load", calcularResumen3);
+</script>
+
+
+<!------------------------------------------------------------------------------------------------------------------->
 
 <!-- ================= TABLA 4 (NUEVA) ================= -->
 <div class="card">
@@ -528,7 +533,6 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$5.00</td>
@@ -551,8 +555,6 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
-
-
 <tr>
 <td>Nicole Romero</td>
 <td>$5.00</td>
@@ -575,6 +577,16 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
+<tr>
+<td>Nicole Romero</td>
+<td>$15.00</td>
+<td>Mike Rosales</td>
+<td>$3.00</td>
+<td>***/****/*****</td>
+<td>****</td>
+<td>PAYPAL</td>
+<td>Listo</td>
+</tr>
 
 <tr>
 <td>Nicole Romero</td>
@@ -587,6 +599,16 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
+<tr>
+<td>Nicole Romero</td>
+<td>$15.00</td>
+<td>Mike Rosales</td>
+<td>$3.00</td>
+<td>***/****/*****</td>
+<td>****</td>
+<td>PAYPAL</td>
+<td>Listo</td>
+</tr>
 
 <tr>
 <td>Nicole Romero</td>
@@ -599,8 +621,6 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
-
-
 <tr>
 <td>Nicole Romero</td>
 <td>$15.00</td>
@@ -611,33 +631,6 @@ TABLA DE GANANCIAS 4
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
-
-
-<tr>
-<td>Nicole Romero</td>
-<td>$15.00</td>
-<td>Mike Rosales</td>
-<td>$3.00</td>
-<td>***/****/*****</td>
-<td>****</td>
-<td>PAYPAL</td>
-<td>Listo</td>
-</tr>
-
-
-
-<tr>
-<td>Nicole Romero</td>
-<td>$15.00</td>
-<td>Mike Rosales</td>
-<td>$3.00</td>
-<td>***/****/*****</td>
-<td>****</td>
-<td>PAYPAL</td>
-<td>Listo</td>
-</tr>
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -649,8 +642,6 @@ TABLA DE GANANCIAS 4
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -663,8 +654,6 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
-
-
 <tr>
 <td>Nicole Romero</td>
 <td>$30.00</td>
@@ -676,7 +665,6 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$10.00</td>
@@ -687,9 +675,6 @@ TABLA DE GANANCIAS 4
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
-
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -702,8 +687,6 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
-
-
 <tr>
 <td>Nicole Romero</td>
 <td>$10.00</td>
@@ -715,7 +698,6 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$10.00</td>
@@ -726,8 +708,6 @@ TABLA DE GANANCIAS 4
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -739,8 +719,6 @@ TABLA DE GANANCIAS 4
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -753,7 +731,6 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$10.00</td>
@@ -765,7 +742,6 @@ TABLA DE GANANCIAS 4
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$5.00</td>
@@ -776,15 +752,13 @@ TABLA DE GANANCIAS 4
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
-
-
 
 </tbody>
 </table>
 
 </div>
 
+<!-- ================= RESUMEN TABLA 4 ================= -->
 <div>
 <h2 id="ganancia-vendedora-4"></h2>
 <h2 id="ganancia-coordinador-4"></h2>
@@ -794,53 +768,42 @@ TABLA DE GANANCIAS 4
 
 function calcularResumen4(){
 
-let totalV = 0;
-let totalC = 0;
+    let totalV = 0;
+    let totalC = 0;
 
-const filas =
-document.querySelectorAll("#tabla-5 tbody tr");
+    const filas = document.querySelectorAll("#tabla-4 tbody tr");
 
-filas.forEach(fila => {
+    filas.forEach(fila => {
 
-totalV +=
-parseFloat(
-fila.children[1].textContent.replace("$","")
-) || 0;
+        totalV += parseFloat(
+            fila.children[1].textContent.replace("$", "")
+        ) || 0;
 
-totalC +=
-parseFloat(
-fila.children[3].textContent.replace("$","")
-) || 0;
+        totalC += parseFloat(
+            fila.children[3].textContent.replace("$", "")
+        ) || 0;
 
-});
+    });
 
-document.getElementById(
-"ganancia-vendedora-5"
-).textContent =
-`NICOLE GANA $${totalV.toFixed(2)} DÓLARES`;
+    document.getElementById(
+        "ganancia-vendedora-4"
+    ).textContent =
+        `NICOLE GANA $${totalV.toFixed(2)} DÓLARES`;
 
-document.getElementById(
-"ganancia-coordinador-5"
-).textContent =
-`MIKE ROSALES GANA $${totalC.toFixed(2)} DÓLARES`;
+    document.getElementById(
+        "ganancia-coordinador-4"
+    ).textContent =
+        `MIKE ROSALES GANA $${totalC.toFixed(2)} DÓLARES`;
 
 }
 
-window.onload = calcularResumen4;
+window.addEventListener("load", calcularResumen4);
 
 </script>
 
 
 
-
-
-
-
-
-
-
-
-<!-- ================= TABLA 6 ================= -->
+<!-- ================= TABLA 5 ================= -->
 <div class="card">
 
 <h2 style="text-align:center;color:#ffd700;">
@@ -896,7 +859,6 @@ TABLA DE GANANCIAS 5
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$10.00</td>
@@ -907,8 +869,6 @@ TABLA DE GANANCIAS 5
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -921,8 +881,6 @@ TABLA DE GANANCIAS 5
 <td>Listo</td>
 </tr>
 
-
-
 <tr>
 <td>Nicole Romero</td>
 <td>$15.00</td>
@@ -933,8 +891,6 @@ TABLA DE GANANCIAS 5
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -958,7 +914,6 @@ TABLA DE GANANCIAS 5
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$5.00</td>
@@ -969,7 +924,6 @@ TABLA DE GANANCIAS 5
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -982,7 +936,6 @@ TABLA DE GANANCIAS 5
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$10.00</td>
@@ -994,7 +947,6 @@ TABLA DE GANANCIAS 5
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$10.00</td>
@@ -1005,7 +957,6 @@ TABLA DE GANANCIAS 5
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -1028,8 +979,6 @@ TABLA DE GANANCIAS 5
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -1086,8 +1035,6 @@ TABLA DE GANANCIAS 5
 <td>Listo</td>
 </tr>
 
-
-
 <tr>
 <td>Nicole Romero</td>
 <td>$5.00</td>
@@ -1109,7 +1056,6 @@ TABLA DE GANANCIAS 5
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -1143,7 +1089,6 @@ TABLA DE GANANCIAS 5
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -1156,7 +1101,6 @@ TABLA DE GANANCIAS 5
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$5.00</td>
@@ -1179,7 +1123,6 @@ TABLA DE GANANCIAS 5
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$20.00</td>
@@ -1191,7 +1134,6 @@ TABLA DE GANANCIAS 5
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$10.00</td>
@@ -1202,8 +1144,6 @@ TABLA DE GANANCIAS 5
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -1251,12 +1191,12 @@ TABLA DE GANANCIAS 5
 
 
 
-
 </tbody>
 </table>
 
 </div>
 
+<!-- ================= RESUMEN TABLA 5 ================= -->
 <div>
 <h2 id="ganancia-vendedora-5"></h2>
 <h2 id="ganancia-coordinador-5"></h2>
@@ -1270,29 +1210,29 @@ let totalV = 0;
 let totalC = 0;
 
 const filas =
-document.querySelectorAll("#tabla-6 tbody tr");
+document.querySelectorAll("#tabla-5 tbody tr");
 
 filas.forEach(fila => {
 
 totalV +=
 parseFloat(
-fila.children[1].textContent.replace("$","")
+fila.children[1].textContent.replace("$","").trim()
 ) || 0;
 
 totalC +=
 parseFloat(
-fila.children[3].textContent.replace("$","")
+fila.children[3].textContent.replace("$","").trim()
 ) || 0;
 
 });
 
 document.getElementById(
-"ganancia-vendedora-6"
+"ganancia-vendedora-5"
 ).textContent =
-`NICOLE GANA $${totalV.toFixed(2)} DÓLARES`;
+`NICOLE ROMERO GANA $${totalV.toFixed(2)} DÓLARES`;
 
 document.getElementById(
-"ganancia-coordinador-6"
+"ganancia-coordinador-5"
 ).textContent =
 `MIKE ROSALES GANA $${totalC.toFixed(2)} DÓLARES`;
 
@@ -1305,7 +1245,7 @@ window.addEventListener("load", calcularResumen5);
 
 
 
-<!--------------------TABLA 7----------------------------------------------->
+<!--------------------TABLA 6----------------------------------------------->
 
 <div class="card">
 
@@ -1340,7 +1280,6 @@ TABLA DE GANANCIAS 6
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$10.00</td>
@@ -1363,9 +1302,6 @@ TABLA DE GANANCIAS 6
 <td>Listo</td>
 </tr>
 
-
-
-
 <tr>
 <td>Nicole Romero</td>
 <td>$30.00</td>
@@ -1376,7 +1312,6 @@ TABLA DE GANANCIAS 6
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -1389,7 +1324,6 @@ TABLA DE GANANCIAS 6
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$20.00</td>
@@ -1400,7 +1334,6 @@ TABLA DE GANANCIAS 6
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -1445,7 +1378,6 @@ TABLA DE GANANCIAS 6
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -1469,7 +1401,6 @@ TABLA DE GANANCIAS 6
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$5.00</td>
@@ -1480,7 +1411,6 @@ TABLA DE GANANCIAS 6
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -1493,8 +1423,6 @@ TABLA DE GANANCIAS 6
 <td>Listo</td>
 </tr>
 
-
-
 <tr>
 <td>Nicole Romero</td>
 <td>$10.00</td>
@@ -1505,7 +1433,6 @@ TABLA DE GANANCIAS 6
 <td>PAYPAL</td>
 <td>Listo</td>
 </tr>
-
 
 <tr>
 <td>Nicole Romero</td>
@@ -1529,7 +1456,6 @@ TABLA DE GANANCIAS 6
 <td>Listo</td>
 </tr>
 
-
 <tr>
 <td>Nicole Romero</td>
 <td>$15.00</td>
@@ -1549,6 +1475,7 @@ TABLA DE GANANCIAS 6
 
 </div>
 
+<!-- RESUMEN TABLA 6 -->
 <div>
 <h2 id="ganancia-vendedora-6"></h2>
 <h2 id="ganancia-coordinador-6"></h2>
@@ -1561,27 +1488,27 @@ function calcularResumen6(){
     let totalV = 0;
     let totalC = 0;
 
-    const filas = document.querySelectorAll("#tabla-7 tbody tr");
+    const filas = document.querySelectorAll("#tabla-6 tbody tr");
 
     filas.forEach(fila => {
 
         totalV += parseFloat(
-            fila.children[1].textContent.replace("$","")
+            fila.children[1].textContent.replace("$","").trim()
         ) || 0;
 
         totalC += parseFloat(
-            fila.children[3].textContent.replace("$","")
+            fila.children[3].textContent.replace("$","").trim()
         ) || 0;
 
     });
 
     document.getElementById(
-        "ganancia-vendedora-7"
+        "ganancia-vendedora-6"
     ).textContent =
         `NICOLE GANA $${totalV.toFixed(2)} DÓLARES`;
 
     document.getElementById(
-        "ganancia-coordinador-7"
+        "ganancia-coordinador-6"
     ).textContent =
         `MIKE ROSALES GANA $${totalC.toFixed(2)} DÓLARES`;
 
@@ -1590,8 +1517,6 @@ function calcularResumen6(){
 window.addEventListener("load", calcularResumen6);
 
 </script>
-</div>
-
 
 
 
@@ -1640,6 +1565,7 @@ TABLA DE GANANCIAS 7
 
 </div>
 
+<!-- RESUMEN TABLA 7 -->
 <div>
 <h2 id="ganancia-vendedora-7"></h2>
 <h2 id="ganancia-coordinador-7"></h2>
@@ -1652,7 +1578,7 @@ function calcularResumen7() {
     let totalV = 0;
     let totalC = 0;
 
-    const filas = document.querySelectorAll("#tabla-8 tbody tr");
+    const filas = document.querySelectorAll("#tabla-7 tbody tr");
 
     filas.forEach(fila => {
 
@@ -1667,12 +1593,12 @@ function calcularResumen7() {
     });
 
     document.getElementById(
-        "ganancia-vendedora-8"
+        "ganancia-vendedora-7"
     ).textContent =
         `NICOLE GANA $${totalV.toFixed(2)} DÓLARES`;
 
     document.getElementById(
-        "ganancia-coordinador-8"
+        "ganancia-coordinador-7"
     ).textContent =
         `MIKE ROSALES GANA $${totalC.toFixed(2)} DÓLARES`;
 }
@@ -1680,18 +1606,5 @@ function calcularResumen7() {
 window.addEventListener("load", calcularResumen7);
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
